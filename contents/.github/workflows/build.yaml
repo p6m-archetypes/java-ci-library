@@ -1,0 +1,17 @@
+name: Build
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: p6m-actions/java-maven-setup@v1
+      - uses: p6m-actions/java-maven-build@v1
+        with:
+          run-test: "false"
+          build-command: "mvn verify --no-transfer-progress"
