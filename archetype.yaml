@@ -1,0 +1,16 @@
+---
+description: "Java CI Workflows — GitHub Actions build and release workflows for Maven projects"
+summary: >
+  Generates .github/workflows/build.yaml (CI on push/PR) and
+  .github/workflows/cut-tag.yaml (manual release tagging) for any
+  Java Maven service archetype. Consumed as a library by service
+  archetypes, or run standalone to retrofit an existing project.
+authors: ["Jimmie Fulton <jimmie@ybor.ai>"]
+tags: ["library", "java", "ci", "github-actions", "maven"]
+
+requires:
+  archetect: "3.0.0"
+
+templating:
+  trim_blocks: true
+  lstrip_blocks: true
