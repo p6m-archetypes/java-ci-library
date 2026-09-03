@@ -1,8 +1,7 @@
 -- java-ci-library main module.
 --
 -- Generates GitHub Actions CI workflows for Java Maven service archetypes:
---   .github/workflows/build.yaml     — CI build on every push and PR
---   .github/workflows/cut-tag.yaml   — manual workflow_dispatch release tagging
+--   .github/workflows/build.yaml     — the one pipeline: PR + main builds, and manual minor/major releases via workflow_dispatch (version-level)
 --   .github/workflows/promote.yaml   — manual workflow_dispatch promotion of a release to stg/prd
 --
 -- Uses p6m-actions: java-maven-setup@v1, java-maven-build@v1, java-maven-cut-tag@v1
